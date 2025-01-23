@@ -34,3 +34,30 @@ class Database:
         except (json.JSONDecodeError, FileNotFoundError):
             print("Error reading the file. Ensure it's a valid JSON file.")
             return False
+
+    def search(self, email, password):
+        try:
+            # Check if the file exists
+            with open(self.file_name, "r") as rf:
+                users = json.load(rf)
+
+            # Search for the email in the user list
+            for user in users:
+                if user["email"] == email:
+                    # Check if the password matches
+                    if user["password"] == password:
+                        print("Login successful!")
+                        return True
+                    else:
+                        print("Incorrect password.")
+                        return False
+
+            # Email not found
+            print("Email not found in the database.")
+            return False
+        except json.JSONDecodeError:
+            print("Error reading the file. Ensure it's a valid JSON file.")
+            return False
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            return False

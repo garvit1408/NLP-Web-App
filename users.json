@@ -7,6 +7,21 @@
     {
         "name": "Garvit",
         "email": "garvit@gmail.com",
-        "password": "fsaf123"
+        "password": "gar123"
+    },
+    {
+        "name": "Shruti",
+        "email": "Shruti@gmail.com",
+        "password": "shru123"
+    },
+    {
+        "name": "Swapnil",
+        "email": "Swap@gmail.com",
+        "password": "swap123"
+    },
+    {
+        "name": "Swapnil Aandha",
+        "email": "swapnil12@gmail.com",
+        "password": "1234"
     }
 ]
